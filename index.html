@@ -2,29 +2,28 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Aula Formulário</title>
+        <title>Aula - Introdutória ao css</title>
         <style>
-            body {
-                background-color: black; /* Aqui você pode usar black ou #000000 */
-                color: white; /* Para garantir que o texto seja legível, mudamos a cor do texto para branco */
+            h2 {
+                color:red
+            }
+            span {
+                font-weight: bold;
             }
         </style>
+        <!-- Vinculando arquivo externo .css -->
+         <link rel="Stylesheet" href="styles.css">
     </head>
     <body>
-        <form action="#" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="name" required>
-            <br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
-            <label for="idade">Idade:</label>
-            <input type="number" id="idade" name="idade" required>
-            <br><br>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-            <br><br>
-            <input type="submit" value="Enviar">
-        </form>
+        <!-- Exemplo de CSS inline -->
+        <h1 style="color: blue;">Titulo em Azul</h1>
+        <p style="font-size: 16px;">Este é um paragrafo com fonte 16px</p>
+         <!-- Exemplo de CSS Embed -->
+     <h2>Titulo em vermelho</h2>
+     <span>Span em negrito</span>
+     <!-- Exemplo de CSS com arquivo externo-->
+      <h4 class="title">|Titulo com CSS externo</h4>
+      <p id="text-primary">Texto primario</p>
     </body>
 </html>
+
