@@ -44,15 +44,23 @@ header h1 {
 }
 
 .banner {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1170/1*SxMvHbycirKpgoG0UBBIBQ.jpeg');
+    background-size: cover;
+    background-position: center; 
+    padding: 50px; 
+    color: white; 
+    height: 200px; 
     display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    background-color: #444;
-    padding: 20px;
-    border-bottom: 2px solid #0fc1b7;
 }
 
 .banner-content {
-    max-width: 50%;
+    max-width: 50%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
 }
 
 .banner-content h2 {
@@ -61,15 +69,15 @@ header h1 {
     color: #0fc1b7;
 }
 
-.banner-content p {
-    margin: 5px 0;
-}
-
 .banner-image img {
-    max-height: 300px;
-    width: 1000px;
-    height: 130px; 
+    background-position: center;
+    width: 200px;
+    height: 160; 
     border-radius: 8px;
+    object-fit: cover;
+    text-align: center;
+    margin: 15px;
+    
 }
 
 main {
@@ -151,20 +159,6 @@ main {
     margin-bottom: 10px;
 }
 
-.ranking .tabs button {
-    flex: 1;
-    background-color: #444;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    margin-right: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.ranking .tabs button.active {
-    background-color: #0fc1b7;
-}
 
 .rank-list {
     display: flex;
