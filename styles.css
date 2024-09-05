@@ -97,20 +97,16 @@ main {
     flex-direction: column;
 }
 
-.sidebar .tabs button {
-    background-color: #444;
+.sidebar .tabs h4 {
+    background-color: #0fc1b7;
     color: #fff;
     border: none;
     padding: 10px;
     margin-bottom: 5px;
     text-align: left;
     border-radius: 4px;
-    cursor: pointer;
 }
 
-.sidebar .tabs button.active {
-    background-color: #0fc1b7;
-}
 
 .item-list {
     margin-top: 20px;
@@ -123,9 +119,10 @@ main {
 }
 
 .item img {
-    width: 50px;
-    height: 75px;
+    width: 100px;
+    height: 150px;
     margin-right: 10px;
+    object-fit: cover;
 }
 
 .main-content {
