@@ -1,62 +1,121 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF8">
-    <title>Aula Tabela</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKSCASE-VIRTUAL</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--Tabela Simples -->
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Esporte Favorito</th>
-        </tr>
-        <tr>
-            <td>João</td>
-            <td>18 anos</td>
-            <td>Futebol</td>
-        </tr>
-        <tr>
-            <td>Maria</td>
-            <td>23 Anos</td>
-            <td>Volei</td>
-        </tr>
-        <tr>
-            <td>Matheus</td>
-            <td>26 Anos</td>
-            <td>Surf</td>
-        </tr>    
-    </table>
+    <header>
+        <h1>BOOKSCASE-VIRTUAL</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar livro...">
+            <button><img src="data:image/png;base64,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" alt="Pesquisar"></button>
+            <button><img src="https://cdn-icons-png.freepik.com/512/64/64572.png" alt="Usuário"></button>
+        </div>
+    </header>
 
-    <!-- tabela com Colspan -->
-     <table>
-        <tr>
-            <th>Produto</th>
-            <th>Preço</th>
-            <th>Quantidade</th>
-            <th>Total</th>
-        </tr>
-        <tr>
-            <td>Camiseta</td>
-            <td>R$ 39,90</td>
-            <td>2</td>
-            <td>R$ 80,00</td>
-        </tr>
-        <tr>
-            <td>Calça Jeans</td>
-            <td>R$ 89,90</td>
-            <td>1</td>
-            <td>R$ 89,90</td>
-        </tr>
-        <tr>
-            <td>Tênis</td>
-            <td>R$ 149,90</td>
-            <td>2</td>
-            <td>R$ 300</td>
-        </tr>
-        <tr>
-            <td colspan="3">Total Geral</td>
-            <td>R$ 599,90</td>
-        </tr>
-     </table>
+    <section class="banner">
+        <div class="banner-content">
+            <h2>1° Mais Pesquisado</h2> 
+        </div>
+        <div class="banner-image">
+            <img src="https://m.media-amazon.com/images/I/51E2055ZGUL._SY466_.jpg" alt="Clean Code">
+        </div>
+        <div class="banner-content">
+            <h2>Clean Code</h2>
+            <p>Conhecimento</p>
+            <p>Um código limpo refere a um conjunto de boas práticas</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="sidebar"> <!-- Lista Todos -->
+            <div class="tabs">
+                <h4>Todos</h4>
+            </div>
+            <div class="item-list">
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/41kxiDqMZ3L._SY445_SX342_.jpg" alt="Item 1">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/91M9xPIf10L._SY466_.jpg" alt="Item 2">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/618liDNZjIL._AC_UY327_QL65_.jpg" alt="Item 3">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/51Hg0c-RYsL._SY445_SX342_.jpg" alt="Item 4">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/710Nd+Itq+L._AC_UL480_FMwebp_QL65_.jpg" alt="Item 5">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/81iqH8dpjuL._SY466_.jpg" alt="Item 6">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/81eT2pjx4jL._SY466_.jpg" alt="Item 7">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/81TUVVDIgfL._SY466_.jpg" alt="Item 8">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/51E2055ZGUL._SY466_.jpg" alt="Item 9">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/51hhuav2bHS._SY445_SX342_.jpg" alt="Item 10">
+                </div>
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/I/51FBILW8cWS._SY445_SX342_.jpg" alt="Item 11">
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content"> <!-- Lista Ranking -->
+            <div class="section-block">
+                <h3>Ranking</h3>
+                <div class="rank-list">
+                    <div class="rank-item">
+                        <img src="https://m.media-amazon.com/images/I/51E2055ZGUL._SY466_.jpg" alt="Item 1">
+                        <p>1°</p>
+                    </div>
+                    <div class="rank-item">
+                        <img src="https://m.media-amazon.com/images/I/51FBILW8cWS._SY445_SX342_.jpg" alt="Item 2">
+                        <p>2°</p>
+                    </div>
+                    <div class="rank-item">
+                        <img src="https://m.media-amazon.com/images/I/81eT2pjx4jL._SY466_.jpg" alt="Item 3">
+                        <p>3°</p>
+                    </div>
+                    <div class="rank-item">
+                        <img src="https://m.media-amazon.com/images/I/51Hg0c-RYsL._SY445_SX342_.jpg" alt="Item 4">
+                        <p>4°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="recommended"> <!-- Lista Recomendados -->
+                <h3>Recomendados</h2>
+                <div class="recommended-list">
+                    <div class="recommended-item">
+                        <img src="https://m.media-amazon.com/images/I/51hhuav2bHS._SY445_SX342_.jpg" alt="Item 1">
+                    </div>
+                    <div class="recommended-item">
+                        <img src="https://m.media-amazon.com/images/I/81TUVVDIgfL._SY466_.jpg" alt="Item 2">
+                    </div>
+                    <div class="recommended-item">
+                        <img src="https://m.media-amazon.com/images/I/81iqH8dpjuL._SY466_.jpg" alt="Item 3">
+                    </div>
+                    <div class="recommended-item">
+                        <img src="https://m.media-amazon.com/images/I/710Nd+Itq+L._AC_UL480_FMwebp_QL65_.jpg" alt="Item 4">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BOOKSCASE-VIRTUAL. Todos os direitos reservados.</p>
+    </footer>
 </body>
+</html>
