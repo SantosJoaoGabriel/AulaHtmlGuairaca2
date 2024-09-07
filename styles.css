@@ -90,6 +90,7 @@ main {
     background-color: #2a2a2a;
     padding: 15px;
     border-radius: 8px;
+    overflow-y: auto;
 }
 
 .sidebar .tabs {
@@ -107,9 +108,11 @@ main {
     border-radius: 4px;
 }
 
-
 .item-list {
     margin-top: 20px;
+    overflow-y: scroll;
+    height: calc(105vh - 97px);
+    overflow-y: auto;
 }
 
 .item {
@@ -131,6 +134,7 @@ main {
     margin-bottom: 10px; 
     object-fit: cover; 
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .main-content {
@@ -169,62 +173,23 @@ margin-top: 155px;
 }
 
 
-.rank-list {
-    display: flex;
-    overflow-x: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
-    width: 90%; /* Ajuste conforme o layout */
-}
 
-.rank-list::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
- 
-
-.scroll-buttons {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.scroll-buttons button {
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.scroll-left {
-    left: 0;
-}
-
-.scroll-right {
-    right: 0;
-}
-
-.recommended-list {
+.rank-list, .recommended-list {
     display: flex;
     justify-content: space-between;
     margin-bottom: 83px; 
 }
 
 
-.rank-item, .recommended-book {
+.rank-item, .recommended-item {
     width: 24%;
     text-align: center;
-    flex: 0 0 auto; /* Faz com que os itens não encolham e mantenham seu tamanho */
-    margin-right: 20px; /* Espaçamento entre os itens */
+    flex: 0 0 auto;
+    margin-right: 20px;
     text-align: center;
 }
 
-.rank-item img, .recommended-book img {
+.rank-item img, .recommended-item img {
     margin-top: 22px;
     width: 100%;
     width: 150px;
@@ -233,6 +198,7 @@ margin-top: 155px;
     width: 150px;
     height: 225px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 footer {
