@@ -149,6 +149,7 @@ main {
     margin-bottom: 20px;
     margin-top: 30px;
 }
+
 .recommended {
 margin-top: 155px;
 }
@@ -210,3 +211,60 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+@media (max-width: 768px) {
+
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .search-bar {
+      margin-top: 10px;
+    }
+  
+    .banner {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+    }
+  
+    .banner-content {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .banner-image img {
+      width: 150px;
+      height: auto;
+      margin: 10px 0;
+    }
+  
+    main {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+
+  
+    .main-content {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .rank-list, .recommended-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .rank-item, .recommended-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+  }
