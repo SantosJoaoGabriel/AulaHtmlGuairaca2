@@ -172,6 +172,7 @@ margin-top: 155px;
 .rank-list, .recommended-list {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 83px; 
 }
 
 .rank-item, .recommended-book {
