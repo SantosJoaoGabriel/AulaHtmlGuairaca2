@@ -1,14 +1,9 @@
 
-let numero = ("Por favor, informe um numero:");
+let numero1 = ("Por favor, informe o primeiro numero:");
+let numero2 = ("Por favor, informe um segundo número");
 
-numero = Number(numero);
+let resultado = numero1 * numero2;
 
-if (numero > 0) {
-    console.log("O número é negativo");
-}
-if (numero < 0) {
-    console.log("O número é positivo");
-}
-else {
-    console.log("O número é zero")
-}
+console.log("O resultado da multiplicação é: ", resultado);
+
+
