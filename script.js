@@ -1,10 +1,11 @@
 
-let idade = ("Por favor, informe a sua idade:");
+let numero = ("Por favor, informe um numero:");
 
-idade = Number(idade);
+numero = Number(numero);
 
-if (idade >= 18) {
-    console.log("Você é maior de idade");
-} else {
-    console.log("Você é menor de idade");
+if (numero % 2 === 0) {
+    console.log(numero, " é par");
+}
+else {
+    console.log (numero, " é ímpar");
 }
