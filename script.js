@@ -3,9 +3,12 @@ let numero = ("Por favor, informe um numero:");
 
 numero = Number(numero);
 
-if (numero % 2 === 0) {
-    console.log(numero, " é par");
+if (numero > 0) {
+    console.log("O número é negativo");
+}
+if (numero < 0) {
+    console.log("O número é positivo");
 }
 else {
-    console.log (numero, " é ímpar");
+    console.log("O número é zero")
 }
