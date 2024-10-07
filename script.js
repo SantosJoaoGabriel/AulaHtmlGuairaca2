@@ -1,9 +1,47 @@
+// Função simples Declarativa)
+function saudacao() {
+    return console.log("Olá Mundo");
+}
 
-let numero1 = ("Por favor, informe o primeiro numero:");
-let numero2 = ("Por favor, informe um segundo número");
+// Função com parametros
+function soam(valorA, valorB) {
+    const totalSoma = valorA + valorB;
+    return console.log(totalSoma);
+}
 
-let resultado = numero1 * numero2;
+// Função anônima
+const multiplicar = function (valorA, valorB) {
+    const total = valorA * valorB;
+    return console.log(total);
+}
 
-console.log("O resultado da multiplicação é: ", resultado);
+//  Arrow function
+const dividir = (a, b) => a / b;
 
+// Função com valor padrão de paramemtro
+function exponencial(base, expoente = 2) {
+    const exp = base ** expoente;
+    return console.log(exp);
+}
 
+// Invocar as funções
+saudacao();
+soam(10, 5);
+multiplicar(3, 6);
+exponencial(3);
+exponencial(3, 3);
+
+console.log(dividir(10, 2));
+
+// Função de callback
+function inicializaraplicacao() {
+    saudacao();
+soam(10, 5);
+multiplicar(3, 6);
+exponencial(3);
+exponencial(3, 3);
+
+console.log(dividir(10, 2));
+}
+
+inicializaraplicacao();
