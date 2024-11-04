@@ -1,20 +1,35 @@
-function calculadora(a, b, operacao) {
-    if (operacao === 'soma') {
-        return a + b;
-    }
-    if (operacao === 'subtracao') {
-        return a - b;
-    }
-    if (operacao === 'multiplpicacao') {
-        return a * b;
-    }
-    if (operacao === 'divisao') {
-        return a / b;
-    }
-    return 'Operação invalida';
+let arrayPokemons;
+
+function getPokemon() {
+    fetch( 
+        "https://pokeapi.co/api/v2/pokemon" ,
+        {
+            metch: "GET'"
+        }
+    )
+    .then ((response) => response.json())
+    .then ((data) => {
+        arrayPokemons = data.results;
+        appendData(arrayPokemons);
+    })
+    .catch((error) => {
+        console.error("Erro", error);
+    })
 }
 
-console.log(calculadora(10, 5, 'soma'));
-console.log(calculadora(10, 5, 'subtracao'));
-console.log(calculadora(10, 5, 'multiplicacao'));
-console.log(calculadora(10, 5, 'divisao'))
+function appendData(pokemons) {
+    let place = document.querySelector("#data-output");
+    let output = "";
+
+    for (let pokemon of pokemons) {
+        output += `
+        <tr>
+            <td>${pokemon.name}</td>
+            <td>${pokemon.url}</td>
+        </tr>
+        `
+    }
+    place.innerHTML = output;
+}
+
+getPokemon();
