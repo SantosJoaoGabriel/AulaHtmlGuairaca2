@@ -1,35 +1,36 @@
-let arrayPokemons;
+let arrayRickMorty;
 
-function getPokemon() {
-    fetch( 
-        "https://pokeapi.co/api/v2/pokemon" ,
-        {
-            metch: "GET'"
-        }
-    )
-    .then ((response) => response.json())
-    .then ((data) => {
-        arrayPokemons = data.results;
-        appendData(arrayPokemons);
+function getMorty() {
+    fetch("https://rickandmortyapi.com/api/character/?page=19", {
+        method: "GET"
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        arrayRickMorty = data.results;
+        appendData(arrayRickMorty);
     })
     .catch((error) => {
-        console.error("Erro", error);
-    })
+        console.error("Erro:", error);
+    });
 }
 
-function appendData(pokemons) {
+function appendData(characters) {
     let place = document.querySelector("#data-output");
     let output = "";
 
-    for (let pokemon of pokemons) {
+    for (let character of characters) {
         output += `
         <tr>
-            <td>${pokemon.name}</td>
-            <td>${pokemon.url}</td>
+            <td><img src="${character.image}" alt="${character.name}" width="50" height="50"></td>
+            <td>${character.name}</td>
+            <td>${character.status}</td>
+            <td>${character.species}${character.type ? `, ${character.type}` : ""}</td>
+            <td>${character.origin.name}</td>
+            <td>${character.location.name}</td>
         </tr>
-        `
+        `;
     }
     place.innerHTML = output;
 }
 
-getPokemon();
+getMorty();
