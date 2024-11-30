@@ -1,36 +1,61 @@
-let arrayRickMorty;
+let = idade = prompt("Informe sua idade");
 
-function getMorty() {
-    fetch("https://rickandmortyapi.com/api/character/?page=19", {
-        method: "GET"
-    })
-    .then((response) => response.json())
-    .then((data) => {
-        arrayRickMorty = data.results;
-        appendData(arrayRickMorty);
-    })
-    .catch((error) => {
-        console.error("Erro:", error);
-    });
+if (idade >= 18) {
+    console.log("Você é maior de idade");
+} else {
+    console.log("Menor de idade");
 }
 
-function appendData(characters) {
-    let place = document.querySelector("#data-output");
-    let output = "";
 
-    for (let character of characters) {
-        output += `
-        <tr>
-            <td><img src="${character.image}" alt="${character.name}" width="50" height="50"></td>
-            <td>${character.name}</td>
-            <td>${character.status}</td>
-            <td>${character.species}${character.type ? `, ${character.type}` : ""}</td>
-            <td>${character.origin.name}</td>
-            <td>${character.location.name}</td>
-        </tr>
-        `;
+function Numero(x) {
+    if (x % 2 === 0) {
+        return "Par"
+    } else {
+        return "Impar"
     }
-    place.innerHTML = output;
 }
 
-getMorty();
+
+let numero = prompt("Informe um numero");
+
+if (numero > 0) {
+    console.log("Positivo")
+} else if ( numero < 0) {
+    console.log("Negativo")
+} else {
+    console.log("Zero")
+}
+
+function tabuada(x) {
+
+    for (i = 0; i <= 10; i++)
+        console.log(`${x} x ${i} = ${x * i}`);
+}
+
+let Num_tab = prompt("Informe um numero a ser multiplicado");
+tabuada(Num_tab);
+
+
+
+// calculadoura
+function calculadora(a, b, operacao) {
+
+    if (operacao === 'soma') {
+        return a + b;
+    }
+    if (operacao === 'subtracao') {
+        return a - b;
+    }
+    if (operacao === 'multiplicacao') {
+        return a * b;
+    }
+    if (operacao === 'divisao') {
+        return a / b;
+    }  
+    return "Operação invalida";
+}
+
+console.log(calculadora(10, 5, 'soma'));
+console.log(calculadora(10, 5, 'subtracao'));
+console.log(calculadora(10, 5, 'multilicacao'));
+console.log(calculadora(10, 5, 'divisao'));
